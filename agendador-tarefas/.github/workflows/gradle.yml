@@ -34,9 +34,12 @@ jobs:
 
       - name: Grant execute permission for gradlew
         run: chmod +x gradlew
+        working-directory: agendador-tarefas
 
       - name: Build with Gradle
         run: ./gradlew build
+        working-directory: agendador-tarefas
 
       - name: Run tests
         run: ./gradlew test
+        working-directory: agendador-tarefas
