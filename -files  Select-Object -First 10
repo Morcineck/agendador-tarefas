@@ -1,0 +1,20 @@
+[33mdbce1bd[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mdevelop[m[33m, [m[1;31morigin/develop[m[33m)[m remove pasta duplicada e adiciona gitignore
+[33m0f70d02[m Merge branch 'develop' of https://github.com/Morcineck/agendador-tarefas into develop
+[33m1526cef[m corrige working-directory no workflow
+[33m52e97aa[m Merge pull request #6 from Morcineck/feature/requisicoes
+[33mfaa3307[m[33m ([m[1;31morigin/feature/requisicoes[m[33m, [m[1;32mfeature/requisicoes[m[33m)[m deletada classe de testes
+[33ma0989e6[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m Update gradle.yml
+[33m69d0573[m Merge pull request #5 from Morcineck/develop
+[33medb5313[m Merge pull request #4 from Morcineck/feature/requisicoes
+[33m4a2a1df[m adicionados métodos de delete, path de status e put de tarefas
+[33m089a508[m adcionados os metodos get por email e por periodo
+[33mfb93d76[m adicionado metodo post
+[33mcb60aeb[m Merge pull request #3 from Morcineck/feature/security
+[33m623cfa1[m[33m ([m[1;31morigin/feature/security[m[33m, [m[1;32mfeature/security[m[33m)[m correção de apontamentos
+[33m8d2b045[m adiciona develop no workflow
+[33mec43986[m corrige branch do workflow para main
+[33m96739ee[m remove .idea do repositorio
+[33m3348212[m[33m ([m[1;32mmain[m[33m)[m Merge pull request #2 from Morcineck/develop
+[33ma20cc66[m Merge pull request #1 from Morcineck/main
+[33m202c3a0[m Create gradle.yml
+[33m9cac911[m commit inicial com esqueleto

@@ -1,5 +1,6 @@
 package com.morcineck.agendadortarefas.infrastructure.security.client;
 
+
 import com.morcineck.agendadortarefas.business.dto.UsuarioDTO;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -10,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 public interface UsuarioClient {
 
     @GetMapping("/usuario")
-    UsuarioDTO buscaUsiarioPorEmail(@RequestParam("email") String email,
+    UsuarioDTO buscaUsuarioPorEmail(@RequestParam("email") String email,
                                     @RequestHeader("Authorization") String token);
 
 
