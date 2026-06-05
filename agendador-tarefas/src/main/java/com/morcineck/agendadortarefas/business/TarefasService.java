@@ -33,9 +33,11 @@ public class TarefasService {
         return tarefasConverter.paraTarefaDTO(tarefasRepository.save(entity));
     }
 
-    public List<TarefasDTO> buscaTarefasAgendadaPorPeriodo(LocalDateTime dataInicial, LocalDateTime dataFinal) {
+    public List<TarefasDTO> buscaTarefasAgendadaPorPeriodo(LocalDateTime dataInicial,
+                                                           LocalDateTime dataFinal) {
         return tarefasConverter.paraListaTarefasDTO(
-                tarefasRepository.findByDataEventoBetween(dataInicial, dataFinal));
+                tarefasRepository.findByDataEventoBetweenAndStatusNotificacaoEnum(dataInicial,
+                        dataFinal, StatusNotificacaoEnum.pendente));
     }
 
     public List<TarefasDTO> buscarTarefaPorEmail(String token) {
@@ -71,18 +73,18 @@ public class TarefasService {
         }
     }
 
-        public TarefasDTO updateTarefas(TarefasDTO dto, String id) {
-            try {
-                TarefasEntity entity = tarefasRepository.findById(id)
-                        .orElseThrow(() -> new ResourceNotFoundException("Tarefa não encontrada " + id));
-                tarefaUpdateConverter.updateTarefas(dto, entity);
-                return tarefasConverter.paraTarefaDTO(tarefasRepository.save(entity));
+    public TarefasDTO updateTarefas(TarefasDTO dto, String id) {
+        try {
+            TarefasEntity entity = tarefasRepository.findById(id)
+                    .orElseThrow(() -> new ResourceNotFoundException("Tarefa não encontrada " + id));
+            tarefaUpdateConverter.updateTarefas(dto, entity);
+            return tarefasConverter.paraTarefaDTO(tarefasRepository.save(entity));
 
-            } catch (ResourceNotFoundException e) {
-                throw new ResourceNotFoundException("Erro ao alterar o status da tarefa " + e.getCause());
+        } catch (ResourceNotFoundException e) {
+            throw new ResourceNotFoundException("Erro ao alterar o status da tarefa " + e.getCause());
 
 
-            }
         }
-
     }
+
+}

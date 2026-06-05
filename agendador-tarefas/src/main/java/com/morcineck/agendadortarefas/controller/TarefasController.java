@@ -20,14 +20,14 @@ public class TarefasController {
 
     @PostMapping
     public ResponseEntity<TarefasDTO> gravarTarefas(@RequestBody TarefasDTO dto,
-                                                    @RequestHeader("Authorization") String toke){
-        return ResponseEntity.ok(tarefasService.gravaTarefa(toke, dto));
+                                                    @RequestHeader("Authorization") String token){
+        return ResponseEntity.ok(tarefasService.gravaTarefa(token, dto));
     }
 
     @GetMapping("/eventos")
     public ResponseEntity<List<TarefasDTO>> buscaListaDeTarefasPorPeriodo(
             @RequestParam @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME) LocalDateTime dataInicial,
-            @RequestParam @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME) LocalDateTime dataFinal){
+            @RequestParam @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME) LocalDateTime dataFinal) {
 
         return ResponseEntity.ok(tarefasService.buscaTarefasAgendadaPorPeriodo(dataInicial, dataFinal));
     }

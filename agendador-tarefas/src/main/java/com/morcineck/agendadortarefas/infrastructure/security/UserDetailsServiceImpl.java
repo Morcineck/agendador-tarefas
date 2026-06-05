@@ -14,7 +14,6 @@ public class UserDetailsServiceImpl {
     @Autowired
     private UsuarioClient client;
 
-
     public UserDetails carregaDadosUsuario(String email, String token){
 
         UsuarioDTO usuarioDTO = client.buscaUsuarioPorEmail(email, token);

@@ -16,8 +16,6 @@ public class JwtUtil {
     private final String secretKey = "sua-chave-secreta-super-segura-que-deve-ser-bem-longa";
 
 
-
-
     // Extrai as claims do token JWT (informações adicionais do token)
     public Claims extractClaims(String token) {
         return Jwts.parser()
